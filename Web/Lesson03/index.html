@@ -1,0 +1,65 @@
+<html>
+
+<header>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</header>
+
+<body>
+
+    <div id="app">
+        <span>Message: {{ msg }}</span>
+        <span v-once>这个将不会改变: {{ msg }}</span>
+
+        <p>Using mustaches: {{ rawHtml }}</p>
+        <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+
+        <div :id="dynamicId">
+            <button v-bind:disabled="isButtonDisabled">Button</button>
+        </div>
+
+        <div>
+            {{ count == 0 ? "0" : "不是0" }}
+        </div>
+
+        <p v-if="seen">现在你看到我了</p>
+
+        <a v-bind:href="url">Click me!</a>
+        <a :href="url">Click me!</a>
+
+        <p><a href="#" v-on:click="doSomething">doSomething</a></p>
+        <p><a href="#" @click="doSomething">doSomething</a></p>
+
+        <form v-on:submit.prevent="onSubmit">...</form>
+    </div>
+
+    <script>
+
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                msg: 1,
+                rawHtml: "<h1>This is Vue.js Lession03</h1>",
+                dynamicId: "head",
+                isButtonDisabled: "true",
+                count: 1,
+                seen: true,
+                url: "https://www.google.com",
+                nourl:"#"
+            },
+            created: function () {
+                setInterval(() => {
+                    this.msg++;
+                    // this.seen = !this.seen;
+                }, 1000)
+            },
+            methods: {
+                doSomething: function () {
+                    alert("You are click me!");
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>
