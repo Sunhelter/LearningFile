@@ -2,17 +2,42 @@
 
 <head>
     <title>这是博客</title>
+    <style>
+        .title {
+            color: blueviolet;
+        }
+
+        .author {
+            color: gray;
+        }
+
+        .jumplink {
+            color: royalblue;
+        }
+
+        p {
+            color: #5e6d82;
+            background-color: #50bfff;
+        }
+
+        img {
+            /* border: solid 10px #50bfff; */
+            border-style:solid;
+            border-width: 10px;
+            border-color: chocolate;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>这是博客标题</h1>
-    <div>作者：XXX</div>
+    <h1 class="title">这是博客标题</h1>
+    <div class="author">作者：XXX</div>
     <br />
     <img src="https://www.google.com.sg/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" />
     <br />
     <br />
     <div>
-        <a href="https://github.com/">前往GitHub阅读更多</a>
+        <a class="jumplink" href="https://github.com/">前往GitHub阅读更多</a>
     </div>
     <p>
         这是一大段内容。这是一大段内容。这是一大段内容。这是一大段内容。这是一大段内容。这是一大段内容。
@@ -20,13 +45,13 @@
         这是一大段内容。这是一大段内容。这是一大段内容。这是一大段内容。这是一大段内容。这是一大段内容。
     </p>
 
-    <h1>第一个标题</h1>
+    <h2 class="title">第一个标题</h2>
 
     <p>第一段。第一段。第一段。第一段。第一段。</p>
 
     <p>第二段。第二段。第二段。第二段。第二段。</p>
 
-    <h1>第二个标题</h1>
+    <h2 class="title">第二个标题</h2>
 
     <p>第一段。第一段。第一段。第一段。第一段。</p>
 
