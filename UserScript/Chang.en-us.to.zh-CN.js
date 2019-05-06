@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         切换英文文档至简体中文
+// @name         切换文档语言至简体中文
 // @namespace    https://github.com/Sunhelter/LearningFile/blob/master/UserScript/Chang.en-us.to.zh-CN.js
 // @version      0.3
 // @description  将en-us英文页面切换至zh-CN简体中文
