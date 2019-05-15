@@ -5,7 +5,7 @@
 // @description  支持MSDN/MDN
 // @author       Sunhelter
 // @license      MIT
-// @date         2019-05-06
+// @date         2019-05-15
 // @match        *://docs.microsoft.com/*
 // @match        *://azure.microsoft.com/*
 // @match        *://developer.mozilla.org/*
