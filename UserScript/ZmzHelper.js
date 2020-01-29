@@ -2,7 +2,7 @@
 // @id             www.yyets.com-19abd7a5-61c5-4299-bac0-b57716feab4b@scriptish
 // @name           主站发布助手
 // @version        2.5.0
-// @updateURL      https://raw.githubusercontent.com/Sunhelter/LearningFile/master/UserScript/Chang.en-us.to.zh-CN.js
+// @updateURL      https://raw.githubusercontent.com/Sunhelter/LearningFile/master/UserScript/ZmzHelper.js
 // @namespace
 // @author         鱼骨头
 // @description
