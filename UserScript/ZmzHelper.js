@@ -6,9 +6,9 @@
 // @namespace
 // @author         鱼骨头
 // @description
-// @require        http://js.jstucdn.com/js/jquery-1.7.1.min.js
-// @require        http://js.jstucdn.com/js/jquery.validate.min.js
-// @require        http://yugutou.coderprepares.com/yyets.js
+// @require        https://cdn.staticfile.org/jquery/1.7.1/jquery.min.js
+// @require        https://cdn.staticfile.org/jquery-validate/1.9.0/jquery.validate.min.js
+// @require        @require https://greasyfork.org/scripts/395801-yyets-userscript/code/YYeTs_UserScript.js?version=768634
 // @include        http://www.zimuzu.*/release/resource?rid=*
 // @include        http://www.zimuzu.*/release/subtitle*
 // @include        http://www.zmz*.com/release/resource?rid=*
