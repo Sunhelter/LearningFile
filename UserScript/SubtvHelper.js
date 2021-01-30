@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         字幕发布助手
-// @namespace    https://github.com/Sunhelter
+// @namespace    https://github.com/Sunhelter/LearningFile/blob/master/UserScript/SubtvHelper.js
 // @version      0.3
 // @description  偷懒是第一生产力
 // @author       Sunhelter
