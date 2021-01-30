@@ -1,17 +1,16 @@
 // ==UserScript==
 // @name         字幕发布助手
-// @namespace    https://github.com/Sunhelter/LearningFile/blob/master/UserScript/SubtvHelper.js
-// @version      0.2
-// @description  临时辅助脚本
+// @namespace    https://github.com/Sunhelter
+// @version      0.3
+// @description  偷懒是第一生产力
 // @author       Sunhelter
 // @license      MIT
-// @date         2021-01-27
+// @date         2021-01-30
 // @match        *://subhd.tv/upload
-// @grant        none
 // ==/UserScript==
 
 (function(){
-    var url=window.location.href;
+    var url = window.location.href;
 
      $(function() {
          $("input[name='type'][value='2']").prop("checked",true);
@@ -23,7 +22,7 @@
          $("input[name='format'][value='1']").prop("checked",true);
          $("input[name='format'][value='2']").prop("checked",true);
 
-         $("#douban_xuan").attr("oninput","watch()");
+         //$("#douban_xuan").attr("oninput","watch()");
          $("#edition").attr("onchange","watch()");
 
          var s = document.createElement("script");
@@ -79,6 +78,9 @@
                  }\
                  unitPos++;\
                  section = Math.floor(section / 10);\
+             }\
+             if(section < 20){\
+                 chnStr = chnStr.replace('一十','十');\
              }\
              return chnStr;\
          }\
