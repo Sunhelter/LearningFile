@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         字幕发布助手
 // @namespace    https://github.com/Sunhelter/LearningFile/blob/master/UserScript/SubtvHelper.js
-// @version      0.4
+// @version      0.5
 // @description  偷懒是第一生产力
-// @author       Sunhelter
-// @license      MIT
-// @date         2021-02-04
 // @match        *://subhd.tv/upload
+// @author       Sunhelter
+// @date         2021-02-04
+// @charset		 UTF-8
+// @license      MIT
 // ==/UserScript==
 
 (function(){
@@ -37,7 +38,12 @@
          function watch(){\
              var chi = $(\"#douban_xuan\").val();\
              if(chi.length > 0){\
-                 chi = chi.substring(0,chi.search(/\\s/));\
+                 if(chi.search(/\\s/) > 0){\
+                   chi = chi.substring(0,chi.search(/\\s/));\
+                 }\
+                 else {\
+                   chi = chi.substring(0,chi.search(/\\uFF08/));\
+                 }\
              }\
              else {\
                  alert('请关联剧集');\
