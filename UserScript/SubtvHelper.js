@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         字幕发布助手
 // @namespace    https://github.com/Sunhelter/LearningFile/blob/master/UserScript/SubtvHelper.js
-// @version      0.3
+// @version      0.4
 // @description  偷懒是第一生产力
 // @author       Sunhelter
 // @license      MIT
@@ -22,16 +22,26 @@
          $("input[name='format'][value='1']").prop("checked",true);
          $("input[name='format'][value='2']").prop("checked",true);
 
-         //$("#douban_xuan").attr("oninput","watch()");
-         $("#edition").attr("onchange","watch()");
+         var btn = document.createElement("button");
+         btn.type = "button";
+         btn.setAttribute('class', 'btn btn-primary btn-sm');
+         btn.setAttribute('onclick', 'watch()');
+         var btntxt = document.createTextNode("生成标题");
+         btn.appendChild(btntxt);
+         document.getElementById("subb").parentNode.appendChild(btn);
 
          var s = document.createElement("script");
          s.type = "text/javascript";
+         s.class = "btn btn-primary btn-sm";
          s.textContent = "\
          function watch(){\
              var chi = $(\"#douban_xuan\").val();\
              if(chi.length > 0){\
                  chi = chi.substring(0,chi.search(/\\s/));\
+             }\
+             else {\
+                 alert('请关联剧集');\
+                 return false;\
              }\
 \
              var eng = $(\"#edition\").val();\
@@ -44,6 +54,10 @@
 \
                  $(\"#season\").val(parseInt(season));\
                  $(\"#ep\").val(parseInt(epsoide));\
+             }\
+             else {\
+                 alert('请填写字幕版本');\
+                 return false;\
              }\
 \
              $(\"#title\").attr(\"value\",fullTitle(chi, eng));\
