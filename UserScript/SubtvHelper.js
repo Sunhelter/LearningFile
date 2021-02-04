@@ -5,7 +5,7 @@
 // @description  偷懒是第一生产力
 // @author       Sunhelter
 // @license      MIT
-// @date         2021-01-30
+// @date         2021-02-04
 // @match        *://subhd.tv/upload
 // ==/UserScript==
 
