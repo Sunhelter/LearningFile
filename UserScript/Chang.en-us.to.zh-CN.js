@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         切换文档语言至简体中文
 // @namespace    https://github.com/Sunhelter/LearningFile/blob/master/UserScript/Chang.en-us.to.zh-CN.js
-// @version      0.5
+// @version      0.6
 // @description  支持MSDN/MDN
 // @author       Sunhelter
 // @license      MIT
 // @date         2019-05-15
 // @match        *://docs.microsoft.com/*
+// @match        *://support.microsoft.com/*
 // @match        *://azure.microsoft.com/*
 // @match        *://developer.mozilla.org/*
 // @grant        none
