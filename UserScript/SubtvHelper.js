@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         字幕发布助手
 // @namespace    https://github.com/Sunhelter/LearningFile/blob/master/UserScript/SubtvHelper.js
-// @version      0.5
+// @version      0.6
 // @description  偷懒是第一生产力
 // @match        *://subhd.tv/upload
 // @author       Sunhelter
@@ -22,6 +22,7 @@
          $("input[name='from'][value='1']").prop("checked",true);
          $("input[name='format'][value='1']").prop("checked",true);
          $("input[name='format'][value='2']").prop("checked",true);
+         $("#text").val('翻译/时间轴招募Q群：109420146');
 
          var btn = document.createElement("button");
          btn.type = "button";
