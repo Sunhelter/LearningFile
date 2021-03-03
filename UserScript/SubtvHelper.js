@@ -71,7 +71,7 @@
          }\
 \
          function fullTitle(chi, eng){\
-             return chi + ' '+ eng + '【人人影视】';\
+             return chi + ' '+ eng + '【人人字幕】';\
          }\
 \
          function firstUpperCase(str) {\
