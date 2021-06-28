@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         字幕发布助手
 // @namespace    https://github.com/Sunhelter/LearningFile/blob/master/UserScript/SubtvHelper.js
-// @version      0.8
+// @version      1.0
 // @description  偷懒是第一生产力
 // @match        *://subhd.tv/upload
 // @author       Sunhelter
@@ -60,8 +60,8 @@
                  var epsoide = se[0].replace(/s\\d{1,2}/i,'').replace(/e/i,'');\
                  eng = '第' + SectionToChinese(season) + '季第' + SectionToChinese(epsoide) + '集 (' + firstUpperCase(title) + 'S' + season + 'E' + epsoide + ')';\
 \
-                 $(\"#season\").val(parseInt(season));\
-                 $(\"#ep\").val(parseInt(epsoide));\
+                 $(\"#sub_season\").val(parseInt(season));\
+                 $(\"#sub_ep\").val(parseInt(epsoide));\
              }\
              else {\
                  alert('请填写字幕版本');\
