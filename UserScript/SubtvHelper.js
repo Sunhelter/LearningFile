@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         字幕发布助手
 // @namespace    https://github.com/Sunhelter/LearningFile/blob/master/UserScript/SubtvHelper.js
-// @version      0.7
+// @version      0.8
 // @description  偷懒是第一生产力
 // @match        *://subhd.tv/upload
 // @author       Sunhelter
-// @date         2021-02-04
+// @date         2021-06-28
 // @charset		 UTF-8
 // @license      MIT
 // ==/UserScript==
@@ -14,15 +14,16 @@
     var url = window.location.href;
 
      $(function() {
-         $("input[name='type'][value='2']").prop("checked",true);
-         $("input[name='lang'][value='1']").prop("checked",true);
-         $("input[name='lang'][value='2']").prop("checked",true);
-         $("input[name='lang'][value='3']").prop("checked",true);
-         $("input[name='shuang'][value='1']").prop("checked",true);
-         $("input[name='from'][value='1']").prop("checked",true);
-         $("input[name='format'][value='1']").prop("checked",true);
-         $("input[name='format'][value='2']").prop("checked",true);
-         $("#text").val('翻译/时间轴招募中，请访问YYSubs.com');
+         $("#tv").prop("checked",true);
+         $("#lang1").prop("checked",true);
+         $("#lang2").prop("checked",true);
+         $("#lang3").prop("checked",true);
+         $("#shuang1").prop("checked",true);
+         $("#from1").prop("checked",true);
+         $("#format1").prop("checked",true);
+         $("#format2").prop("checked",true);
+         $("#sub_zu").val("14",true);
+         $("#sub_text").val('翻译/时间轴招募中，请访问YYSubs.com');
 
          var btn = document.createElement("button");
          btn.type = "button";
@@ -30,19 +31,19 @@
          btn.setAttribute('onclick', 'watch()');
          var btntxt = document.createTextNode("生成标题");
          btn.appendChild(btntxt);
-         document.getElementById("subb").parentNode.appendChild(btn);
+         document.getElementById("submit").parentNode.appendChild(btn);
 
          var s = document.createElement("script");
          s.type = "text/javascript";
          s.class = "btn btn-primary btn-sm";
          s.textContent = "\
          function watch(){\
-             var chi = $(\"#douban_xuan\").val();\
+             var chi = $(\"#douban_re\").text();\
              if(chi.length > 0){\
                  if(chi.search(/\\s/) > 0){\
                    chi = chi.substring(0,chi.search(/\\s/));\
                  }\
-                 else {\
+                 else if(chi.search(/\\uFF08/) > 0) {\
                    chi = chi.substring(0,chi.search(/\\uFF08/));\
                  }\
              }\
@@ -51,7 +52,7 @@
                  return false;\
              }\
 \
-             var eng = $(\"#edition\").val();\
+             var eng = $(\"#sub_edition\").val();\
              if(eng.length > 0){\
                  var title = eng.substring(0,eng.search(/s\\d{1,2}e\\d{1,2}/i)).replace(/\\./g,' ');\
                  var se = eng.match(/s\\d{1,2}e\\d{1,2}/i);\
@@ -67,7 +68,7 @@
                  return false;\
              }\
 \
-             $(\"#title\").attr(\"value\",fullTitle(chi, eng));\
+             $(\"#sub_title\").attr(\"value\",fullTitle(chi, eng));\
          }\
 \
          function fullTitle(chi, eng){\
