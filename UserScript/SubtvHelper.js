@@ -3,39 +3,39 @@
 // @namespace    https://github.com/Sunhelter/LearningFile/blob/master/UserScript/SubtvHelper.js
 // @version      0.7
 // @description  偷懒是第一生产力
-// @match        *://subhd.tv/upload
+// @match        *://subhd.tv/upload*
 // @author       Sunhelter
 // @date         2021-02-04
 // @charset		 UTF-8
 // @license      MIT
 // ==/UserScript==
 
-(function(){
+(function() {
     var url = window.location.href;
 
-     $(function() {
-         $("input[name='type'][value='2']").prop("checked",true);
-         $("input[name='lang'][value='1']").prop("checked",true);
-         $("input[name='lang'][value='2']").prop("checked",true);
-         $("input[name='lang'][value='3']").prop("checked",true);
-         $("input[name='shuang'][value='1']").prop("checked",true);
-         $("input[name='from'][value='1']").prop("checked",true);
-         $("input[name='format'][value='1']").prop("checked",true);
-         $("input[name='format'][value='2']").prop("checked",true);
-         $("#text").val('翻译/时间轴招募中，请访问YYSubs.com');
+    $(function() {
+        $("input[name='type'][value='2']").prop("checked", true);
+        $("input[name='lang'][value='1']").prop("checked", true);
+        $("input[name='lang'][value='2']").prop("checked", true);
+        $("input[name='lang'][value='3']").prop("checked", true);
+        $("input[name='shuang'][value='1']").prop("checked", true);
+        $("input[name='from'][value='1']").prop("checked", true);
+        $("input[name='format'][value='1']").prop("checked", true);
+        $("input[name='format'][value='2']").prop("checked", true);
+        $("#text").val('翻译/时间轴招募中，请访问YYSubs.com');
 
-         var btn = document.createElement("button");
-         btn.type = "button";
-         btn.setAttribute('class', 'btn btn-primary btn-sm');
-         btn.setAttribute('onclick', 'watch()');
-         var btntxt = document.createTextNode("生成标题");
-         btn.appendChild(btntxt);
-         document.getElementById("subb").parentNode.appendChild(btn);
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.setAttribute('class', 'btn btn-primary btn-sm');
+        btn.setAttribute('onclick', 'watch()');
+        var btntxt = document.createTextNode("生成标题");
+        btn.appendChild(btntxt);
+        document.getElementById("subb").parentNode.appendChild(btn);
 
-         var s = document.createElement("script");
-         s.type = "text/javascript";
-         s.class = "btn btn-primary btn-sm";
-         s.textContent = "\
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.class = "btn btn-primary btn-sm";
+        s.textContent = "\
          function watch(){\
              var chi = $(\"#douban_xuan\").val();\
              if(chi.length > 0){\
@@ -106,7 +106,6 @@
              return chnStr;\
          }\
          ";
-         document.head.appendChild(s);
-     });
+        document.head.appendChild(s);
+    });
 })();
-
