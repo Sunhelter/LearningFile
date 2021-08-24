@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         字幕发布助手
 // @namespace    https://github.com/Sunhelter/LearningFile/blob/master/UserScript/SubtvHelper.js
-// @version      1.1
-// @description  偷懒是第一生产力
+// @version      1.2
+// @description  偷懒是第一生产力,添加电影适配
 // @match        *://subhd.tv/upload*
 // @author       Sunhelter
-// @date         2021-06-28
+// @date         2021-08-24
 // @charset		 UTF-8
 // @license      MIT
 // ==/UserScript==
@@ -14,7 +14,6 @@
     var url = window.location.href;
 
     $(function() {
-        $("#tv").prop("checked", true);
         $("#lang1").prop("checked", true);
         $("#lang2").prop("checked", true);
         $("#lang3").prop("checked", true);
@@ -55,13 +54,21 @@
              var eng = $(\"#sub_edition\").val();\
              if(eng.length > 0){\
                  var title = eng.substring(0,eng.search(/s\\d{1,2}e\\d{1,2}/i)).replace(/\\./g,' ');\
-                 var se = eng.match(/s\\d{1,2}e\\d{1,2}/i);\
-                 var season = se[0].replace(/e\\d{1,2}/i,'').replace(/s/i,'');\
-                 var epsoide = se[0].replace(/s\\d{1,2}/i,'').replace(/e/i,'');\
-                 eng = '第' + SectionToChinese(season) + '季第' + SectionToChinese(epsoide) + '集 (' + firstUpperCase(title) + 'S' + season + 'E' + epsoide + ')';\
+                 if(title.length > 0){\
+                     var se = eng.match(/s\\d{1,2}e\\d{1,2}/i);\
+                     var season = se[0].replace(/e\\d{1,2}/i,'').replace(/s/i,'');\
+                     var epsoide = se[0].replace(/s\\d{1,2}/i,'').replace(/e/i,'');\
+                     eng = '第' + SectionToChinese(season) + '季第' + SectionToChinese(epsoide) + '集 (' + firstUpperCase(title) + 'S' + season + 'E' + epsoide + ')';\
 \
-                 $(\"#sub_season\").val(parseInt(season));\
-                 $(\"#sub_ep\").val(parseInt(epsoide));\
+                     $(\"#tv\").prop(\"checked\", true);\
+                     $(\"#sub_season\").val(parseInt(season));\
+                     $(\"#sub_ep\").val(parseInt(epsoide));\
+                 }\
+                 else{\
+                    title = eng.substring(0,eng.search(/.\\d{4}.\\d{3,4}p/ig)).replace(/\\./g,' ');\
+                    eng = ' (' + title + ')';\
+                     $(\"#mv\").prop(\"checked\", true);\
+                 }\
              }\
              else {\
                  alert('请填写字幕版本');\
