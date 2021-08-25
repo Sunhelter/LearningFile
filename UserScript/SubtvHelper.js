@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         字幕发布助手
 // @namespace    https://github.com/Sunhelter/LearningFile/blob/master/UserScript/SubtvHelper.js
-// @version      1.2
-// @description  偷懒是第一生产力,添加电影适配
+// @version      1.3
+// @description  自动选择上传的字幕类型，根据片源名称生成标题
 // @match        *://subhd.tv/upload*
 // @author       Sunhelter
-// @date         2021-08-24
+// @date         2021-08-25
 // @charset		 UTF-8
 // @license      MIT
 // ==/UserScript==
