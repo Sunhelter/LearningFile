@@ -7,6 +7,7 @@
 // @license      MIT
 // @date         2019-05-15
 // @match        *://docs.microsoft.com/*
+// @match        *://learn.microsoft.com/*
 // @match        *://support.microsoft.com/*
 // @match        *://azure.microsoft.com/*
 // @match        *://developer.mozilla.org/*

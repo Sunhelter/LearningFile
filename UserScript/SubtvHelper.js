@@ -22,7 +22,7 @@
         $("#format1").prop("checked", true);
         $("#format2").prop("checked", true);
         $("#sub_zu").val("14", true);
-        $("#sub_text").val('翻译/时间轴招募中，请访问YYSubs.com\n\n字幕组目前无任何粉丝群及收费群，欢迎发布调轴的版本，但请勿删除制作名单及网址');
+        $("#sub_text").val('翻译/时间轴招募中，请访问yysub.net\n\n字幕组目前无任何粉丝群及收费群，欢迎发布调轴的版本，但请勿删除制作名单及网址');
 
         var btn = document.createElement("button");
         btn.type = "button";
