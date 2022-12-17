@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         字幕发布助手
 // @namespace    https://github.com/Sunhelter/LearningFile/blob/master/UserScript/SubtvHelper.js
-// @version      1.3
+// @version      1.4
 // @description  自动选择上传的字幕类型，根据片源名称生成标题
 // @match        *://subhd.tv/upload*
 // @author       Sunhelter
