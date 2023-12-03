@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         字幕发布助手
 // @namespace    https://github.com/Sunhelter/LearningFile/blob/master/UserScript/SubtvHelper.js
-// @version      1.4
+// @version      1.4.1
 // @description  自动选择上传的字幕类型，根据片源名称生成标题
 // @match        *://subhd.tv/upload*
 // @author       Sunhelter
-// @date         2021-08-25
+// @date         2023-12-03
 // @charset		 UTF-8
 // @license      MIT
 // ==/UserScript==
@@ -22,7 +22,7 @@
         $("#format1").prop("checked", true);
         $("#format2").prop("checked", true);
         $("#sub_zu").val("14", true);
-        $("#sub_text").val('翻译/时间轴招募中，请访问yysub.net\n\n字幕组目前无任何粉丝群及收费群，欢迎发布调轴的版本，但请勿删除制作名单及网址');
+        $("#sub_text").val('翻译/时间轴招募中，请访问yysub.cc\n\n字幕组目前无任何粉丝群及收费群，欢迎发布调轴的版本，但请勿删除制作名单及网址');
 
         var btn = document.createElement("button");
         btn.type = "button";
